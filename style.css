@@ -1,0 +1,408 @@
+/* --------------------
+   Basic setup
+-------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #9bcfe3;
+  color: white;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+
+/* --------------------
+   Navigation
+-------------------- */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 28px 7%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+
+  background: rgba(155, 207, 227, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  color: white;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #ffca5c;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ffca5c;
+}
+
+
+/* --------------------
+   Hero
+-------------------- */
+
+.hero {
+  min-height: 100vh;
+
+  padding: 160px 10% 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-title {
+  color: #ffca5c;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(70px, 11vw, 150px);
+
+  line-height: 0.9;
+
+  letter-spacing: -6px;
+
+  margin-bottom: 35px;
+}
+
+.hero h1 span {
+  color: #ffca5c;
+}
+
+.hero h2 {
+  font-size: clamp(30px, 5vw, 60px);
+
+  max-width: 900px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+}
+
+.intro {
+  margin-top: 25px;
+
+  font-size: 18px;
+
+  opacity: 0.8;
+}
+
+
+/* --------------------
+   Buttons
+-------------------- */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 40px;
+}
+
+.button {
+  padding: 13px 23px;
+
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+.primary-button {
+  background: #ffca5c;
+  color: #406577;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid white;
+  color: white;
+}
+
+.secondary-button:hover {
+  background: white;
+  color: #6099ae;
+}
+
+
+/* --------------------
+   Sections
+-------------------- */
+
+.section {
+  min-height: 75vh;
+
+  padding: 120px 10%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-number {
+  color: #ffca5c;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: clamp(45px, 7vw, 85px);
+
+  margin-bottom: 45px;
+
+  line-height: 1;
+}
+
+.section > p:not(.section-number) {
+  max-width: 720px;
+
+  font-size: 20px;
+
+  margin-bottom: 18px;
+
+  opacity: 0.9;
+}
+
+
+/* --------------------
+   Research cards
+-------------------- */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  min-height: 270px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  transition: 0.25s;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  color: #ffca5c;
+
+  font-size: 35px;
+
+  margin-bottom: 60px;
+}
+
+.card h3 {
+  font-size: 24px;
+
+  margin-bottom: 12px;
+}
+
+.card p {
+  opacity: 0.75;
+}
+
+
+/* --------------------
+   Projects
+-------------------- */
+
+.project {
+  padding: 45px 0;
+
+  max-width: 900px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.25);
+}
+
+.project-type {
+  color: #ffca5c;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  font-size: 33px;
+
+  margin-bottom: 15px;
+}
+
+.project > p {
+  max-width: 700px;
+
+  opacity: 0.8;
+}
+
+.project a {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #ffca5c;
+}
+
+.project a:hover {
+  color: #ffca5c;
+}
+
+
+/* --------------------
+   Contact
+-------------------- */
+
+.contact {
+  min-height: 70vh;
+}
+
+.contact-link {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: #ffca5c;
+
+  font-size: clamp(24px, 4vw, 45px);
+
+  text-decoration: none;
+}
+
+
+/* --------------------
+   Footer
+-------------------- */
+
+footer {
+  padding: 35px 10%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 13px;
+
+  opacity: 0.7;
+}
+
+
+/* --------------------
+   Mobile
+-------------------- */
+
+@media (max-width: 800px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
